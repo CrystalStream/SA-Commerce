@@ -1,0 +1,12 @@
+
+<form ngSubmit="onSubmit()" #loginForm="ngForm" class="form">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" ngModel name="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" ngModel name="password" class="form-control">
+    </div>
+    <button type="submit" [disabled]="loginForm.invalid"  class="btn btn-primary">Enviar</button>
+</form>

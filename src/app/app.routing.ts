@@ -6,9 +6,9 @@ import { HomeComponent } from './home/home.component';
 
 
 export const routes: Routes = [
-  { path: '', loadChildren: './home/home.module#HomeModule' },
-  { path: 'home', loadChildren: './home/home.module#HomeModule' },
-  { path: '**', loadChildren: './home/home.module#HomeModule' }
+  { path: '', component: AppComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '**', component: AppComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: true });

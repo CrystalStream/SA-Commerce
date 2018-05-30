@@ -21,7 +21,8 @@ export class AuthService {
 
         if (crendenciales.email === this.credencialesStorage.email && 
             crendenciales.password === this.credencialesStorage.password) {
-            
+
+            this.isLoggedIn = true;
             console.log('Logeado');
             this.router.navigate(['/home']);       
         } else {
@@ -32,7 +33,7 @@ export class AuthService {
 
     logout () {
         this.isLoggedIn = false;
-        localStorage.removeItem('token');
+        this.router.navigate(['/login']);       
     }
 
     estaLogeado() {
